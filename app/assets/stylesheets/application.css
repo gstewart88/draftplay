@@ -15,22 +15,30 @@
  */
 
 
- ul li {
- display:block;
- }
+.topbanner {
+  width: 100%;
+  border-top: solid;
+  border-bottom: solid;
+  text-align: right;
+}
 
- .icon {
- width:25px;
- height:25px;
- display:block;
- text-indent:-9999px;
- background-image:url(http://tridentdesign.com/wp-content/uploads/2012/12/gemicon.jpg);
- background-repeat:no-repeat;
- }
+ul li {
+ display:inline-block;
+}
 
- .facebook {
- background-position:-140px -115px;
- }
- .twitter {
- background-position:-185px -115px;
- }
+.btn {
+  background: #aaacad;
+  background-image: -webkit-linear-gradient(top, #aaacad, #5d5e5e);
+  background-image: -moz-linear-gradient(top, #aaacad, #5d5e5e);
+  background-image: -ms-linear-gradient(top, #aaacad, #5d5e5e);
+  background-image: -o-linear-gradient(top, #aaacad, #5d5e5e);
+  background-image: linear-gradient(to bottom, #aaacad, #5d5e5e);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 14px;
+  padding: 5px 10px 5px 10px;
+  margin-right: 5px;
+}
