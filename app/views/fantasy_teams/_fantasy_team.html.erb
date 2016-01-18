@@ -1,5 +1,4 @@
 <div class><%= fantasy_team.name %></div>
-<div class><%= fantasy_team.fantasy_team_players %></div>
 <%= button_to('Delete', fantasy_team_path(fantasy_team), method: :delete, data:{confirm: 'Delete the fantasy team? Are you sure?'}) %>
 <%= button_to('Edit', edit_fantasy_team_path(fantasy_team), method: :get, class: "thumbnail-buttons form-2") %>
 <%= button_to('Show', fantasy_team, method: :get)%>
