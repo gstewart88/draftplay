@@ -1,0 +1,4 @@
+<div class><%= fantasy_league.name %></div>
+<%= button_to('Delete', fantasy_league_path(fantasy_league), method: :delete, data:{confirm: 'Delete the fantasy league? Are you sure?'}) %>
+<%= button_to('Edit', edit_fantasy_league_path(fantasy_league), method: :get) %>
+<%= button_to('Show', fantasy_league, method: :get)%>

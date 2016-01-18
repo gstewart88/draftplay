@@ -1,0 +1,11 @@
+<%= form_for(@fantasy_league) do |f| %>
+<div>
+<%= f.label :name, 'Fantasy League Name:' %>
+</div>
+<div>
+<%= f.text_field :name %>
+</div>
+<br>
+<br>
+  <center><%= f.submit "Complete" %></center>
+<% end %>
