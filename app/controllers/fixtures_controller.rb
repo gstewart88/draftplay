@@ -4,7 +4,7 @@ class FixturesController < ApplicationController
   before_action :set_fixture, only: [:show, :edit, :update, :destroy]
   
   def index
-    @fixtures = Fixtures.all
+    @fixtures = Fixture.all
   end
 
   def new

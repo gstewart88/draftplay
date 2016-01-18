@@ -4,7 +4,7 @@ class FantasyTeamPlayersController < ApplicationController
   before_action :set_fantasy_team_player, only: [:show, :edit, :update, :destroy]
   
   def index
-    @fantasy_team_players = FantasyTeamPlayers.all
+    @fantasy_team_players = FantasyTeamPlayer.all
   end
 
   def new

@@ -4,7 +4,7 @@ class FootballPlayersController < ApplicationController
   before_action :set_football_player, only: [:show, :edit, :update, :destroy]
   
   def index
-    @football_players = FootballPlayers.all
+    @football_players = FootballPlayer.all
   end
 
   def new
