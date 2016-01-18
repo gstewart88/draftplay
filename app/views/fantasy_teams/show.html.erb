@@ -1,0 +1,12 @@
+<div>
+<h3><%= @fantasy_team.name %></h3>
+
+<% @fantasy_team.fantasy_team_players.each do |i| %>
+  <%= i.football_player.name %>
+<% end %>
+
+</div>
+<br>
+<%= link_to('Edit', edit_fantasy_team_path(@fantasy_team)) %>
+<%= link_to('Back', fantasy_teams_path) %>
+</div>
