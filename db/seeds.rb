@@ -43,7 +43,7 @@ FantasyLeague.delete_all
 fl1 = FantasyLeague.create!(name: "SPL")
 
 FantasyTeam.delete_all
-ft1 = FantasyTeam.create!(name: "Rangers", fantasy_league: fl1, user: u1)
+ft1 = FantasyTeam.create!(name: "Alloa Athletic", fantasy_league: fl1, user: u1)
 ft2 = FantasyTeam.create!(name: "Celtic", fantasy_league: fl1, user: u2)
 ft3 = FantasyTeam.create!(name: "Hibs", fantasy_league: fl1, user: u3)
 ft4 = FantasyTeam.create!(name: "Hearts", fantasy_league: fl1, user: u4)
