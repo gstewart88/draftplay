@@ -33,6 +33,11 @@ fp17 = FootballPlayer.create!(name: "Manuel Neuer", club: "Bayern Munich", posit
 fp18 = FootballPlayer.create!(name: "Thibaut Courtois", club: "Chelsea", position: "Goalkeeper")
 fp19 = FootballPlayer.create!(name: "David De Gea", club: "Man Utd", position: "Goalkeeper")
 fp20 = FootballPlayer.create!(name: "Petr Cech", club: "Arsenal", position: "Goalkeeper")
+fp21 = FootballPlayer.create!(name: "Liam Fontaine", club: "Hibernian", position: "Defender")
+fp22 = FootballPlayer.create!(name: "Liam Henderson", club: "Hibernian", position: "Attacker")
+fp23 = FootballPlayer.create!(name: "Jason Cummings", club: "Hibernian", position: "Attacker")
+fp24 = FootballPlayer.create!(name: "Paul Hanlon", club: "Hibernian", position: "Defender")
+fp25 = FootballPlayer.create!(name: "Craig Gordon", club: "Celtic", position: "Goalkeeper")
 
 FantasyLeague.delete_all
 fl1 = FantasyLeague.create!(name: "SPL")
@@ -64,3 +69,8 @@ FantasyTeamPlayer.create!(active: true, first_team: true, football_player: fp17,
 FantasyTeamPlayer.create!(active: true, first_team: true, football_player: fp18, fantasy_team: ft2)
 FantasyTeamPlayer.create!(active: true, first_team: true, football_player: fp19, fantasy_team: ft3)
 FantasyTeamPlayer.create!(active: true, first_team: true, football_player: fp20, fantasy_team: ft4)
+FantasyTeamPlayer.create!(active: false, first_team: false, football_player: fp21, fantasy_team: nil)
+FantasyTeamPlayer.create!(active: false, first_team: false, football_player: fp22, fantasy_team: nil)
+FantasyTeamPlayer.create!(active: false, first_team: false, football_player: fp23, fantasy_team: nil)
+FantasyTeamPlayer.create!(active: false, first_team: false, football_player: fp24, fantasy_team: nil)
+FantasyTeamPlayer.create!(active: false, first_team: false, football_player: fp25, fantasy_team: nil)
