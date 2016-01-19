@@ -1,49 +1,109 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
 
 
-.topbanner {
+.body {
+  background-color: #e5e5e5;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.panel {
+  border: 1px solid #c1c1c1;
+  border-radius: 4px;
+  height: 100px;
+}
+
+/* Responsive Images */
+
+.img-responsive {
   width: 100%;
-  border-top: solid;
-  border-bottom: solid;
-  text-align: right;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.box {
+  display: inline-block;
+  margin-right: -4px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+/* 12 grid layout */
+.box-1 {
+  width: 8.33333333%;
+}
+.box-2 {
+  width: 16.66666666%;
+}
+.box-3 {
+  width: 25%;
+}
+.box-4 {
+  width: 33.33333333%;
+}
+.box-5 {
+  width: 41.66666666%;
+}
+.box-6 {
+  width: 50%;
+}
+.box-7 {
+  width: 58.33333333%;
+}
+.box-8 {
+  width: 66.66666666%;
+}
+.box-9 {
+  width: 75%;
+}
+.box-10 {
+  width: 83.33333333%;
+}
+.box-11 {
+  width: 91.66666666%;
+}
+.box-12 {
+  width: 100%;
 }
 
 ul li {
  display:inline-block;
 }
 
-.btn {
-  background: #aaacad;
-  background-image: -webkit-linear-gradient(top, #aaacad, #5d5e5e);
-  background-image: -moz-linear-gradient(top, #aaacad, #5d5e5e);
-  background-image: -ms-linear-gradient(top, #aaacad, #5d5e5e);
-  background-image: -o-linear-gradient(top, #aaacad, #5d5e5e);
-  background-image: linear-gradient(to bottom, #aaacad, #5d5e5e);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 14px;
-  padding: 5px 10px 5px 10px;
-  margin-right: 5px;
+.menu {
+  border-top: solid;
+  border-bottom: solid;
+  height: 100%;
+  text-align: right;
+  padding-right: 15px;
 }
 
-a {
-  text-decoration: none;
-  color: black;
+.logo-img {
+  height: 100%;
+  margin-left: 70px;
+}
+
+.logo2-img {
+  height: 200px;
+}
+
+.leaguetablehead {
+  text-align: center;
+}
+
+.table {
+  border-left: solid;
 }
