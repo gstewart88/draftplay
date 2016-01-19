@@ -8,27 +8,50 @@
 </head>
 <body>
 
-  <div class="topbanner">
+  <div class="top box box-12">
     <% if user_signed_in? %>
-    <nav class="logged-in">
+    <nav class="menu">
       <ul>
-        <li><%= link_to "Fantasy Teams", fantasy_teams_path %></li>
-        <li><%= link_to "Fantasy Leagues", fantasy_leagues_path %></li>
-        <li class="btn"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
       </ul>
     </nav>
     <% else %>
-  <nav class="logged-out">
-    <ul>
-      <li class="btn"><%= link_to "Sign In", new_user_session_path %></li>
-      <li class="btn"><%= link_to "Register", new_user_registration_path %></li>
-    </ul>
-  </nav>
-<% end %>
-</div>
+    <nav class="menu">
+      <ul>
+        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Register", new_user_registration_path %></li>
+      </ul>
+    </nav>
+    <% end %>
+  </div>
 
-<%= yield %>
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <div class="mid box box-4">
+    <div class="panel">
+    <img class="logo-img" src="http://i.imgur.com/YQVhwzl.png">
+    </div>
+  </div>
+
+  <div class="mid box box-4">
+    <div class="panel">
+<!--     <img class="logo2-img" src="http://www.fantasyfootballgeek.co.uk/wp-content/uploads/2014/12/giroud.png"> -->
+    </div>
+  </div>
+
+  <div class="mid box box-4">
+    <div class="panel">
+    </div>
+  </div>
+
+  <div class="bottom box box-12">
+    <nav class="menu">
+      <ul>
+        <li><%= link_to "Teams", fantasy_teams_path %></li>
+        <li><%= link_to "Leagues", fantasy_leagues_path %></li>
+      </ul>
+    </nav>
+  </div>
+    <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
 </body>
 </html>
