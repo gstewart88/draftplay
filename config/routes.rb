@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: "home#index"
-  resources :fantasy_leagues
-  resources :fantasy_teams
+  resources :fantasy_leagues do
+    resources :fantasy_teams
+  end
+
   resources :fixtures
   resources :football_players
   resources :fantasy_team_players
