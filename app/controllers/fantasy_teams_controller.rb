@@ -2,18 +2,20 @@ class FantasyTeamsController < ApplicationController
   before_action :authenticate_user!
 
   before_action :set_fantasy_team, only: [:show, :edit, :update, :destroy]
+  before_action :set_fantasy_league
   
   def index
     @fantasy_teams = FantasyTeam.all
   end
 
   def new
-    @fantasy_team = FantasyTeam.new
+    @fantasy_team = @fantasy_league.fantasy_teams.new
   end
 
   def create
-    FantasyTeam.create(fantasy_team_params) 
-    redirect_to(fantasy_teams_path)
+    @fantasy_team = @fantasy_league.fantasy_teams.new(fantasy_team_params) 
+    @fantasy_team.save!
+    redirect_to(@fantasy_league)
   end
 
   def show
@@ -39,7 +41,11 @@ class FantasyTeamsController < ApplicationController
     @fantasy_team = FantasyTeam.find(params[:id])
   end
 
+  def set_fantasy_league
+    @fantasy_league = FantasyLeague.find(params[:fantasy_league_id])
+  end
+
   def fantasy_team_params
-    params.require(:fantasy_team).permit(:name, :fantasy_league_id, :user_id)
+    params.require(:fantasy_team).permit(:name, :user_id)
   end
 end

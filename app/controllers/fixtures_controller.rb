@@ -32,7 +32,6 @@ class FixturesController < ApplicationController
     redirect_to(fixtures_path)
   end
 
-
   private
 
   def set_fixture
