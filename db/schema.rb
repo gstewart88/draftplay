@@ -11,13 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160114123839) do
+ActiveRecord::Schema.define(version: 20160120135225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "fantasy_leagues", force: :cascade do |t|
     t.string "name"
+    t.string "aasm_state"
   end
 
   create_table "fantasy_team_players", force: :cascade do |t|
