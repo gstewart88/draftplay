@@ -1,9 +1,13 @@
-<%= form_for(@fantasy_team) do |f| %>
+<%= form_for([@fantasy_league, @fantasy_team]) do |f| %>
 <div>
 <%= f.label :name, 'Fantasy Team Name:' %>
 </div>
 <div>
 <%= f.text_field :name %>
+</div>
+<div>
+  <%= f.label :user_id,'Manager Name' %><br>
+  <%= f.select :user_id, User.all.map {|c| [c.username, c.id] } %>
 </div>
 <br>
 <br>
