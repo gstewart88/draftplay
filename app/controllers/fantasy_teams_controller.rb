@@ -23,7 +23,7 @@ class FantasyTeamsController < ApplicationController
 
   def destroy
     @fantasy_team.destroy
-    redirect_to(fantasy_teams_path)
+    redirect_to(fantasy_league_fantasy_teams_path)
   end
 
   def edit
@@ -31,7 +31,7 @@ class FantasyTeamsController < ApplicationController
 
   def update
     @fantasy_team.update(fantasy_team_params) 
-    redirect_to(fantasy_teams_path)
+    redirect_to(fantasy_league_fantasy_teams_path)
   end
 
 
