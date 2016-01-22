@@ -14,6 +14,7 @@
   <%= i.football_player.name %>
 <% end %>
 <br>
-<%= link_to('Edit', edit_fantasy_team_path(@fantasy_team)) %>
-<%= link_to('Back', fantasy_teams_path) %>
+
+<%= button_to('Edit', edit_fantasy_league_fantasy_team_path, method: :get, class: "thumbnail-buttons form-2") %>
+<%= link_to 'Back', fantasy_league_fantasy_teams_path %>
 </div>
