@@ -9,18 +9,11 @@ th {
   padding: 0;
 }
 
-
-.body {
-  background-color: #e5e5e5;
-}
-
 .text-center {
   text-align: center;
 }
 
 .panel {
-  border: 1px solid #c1c1c1;
-  border-radius: 4px;
   height: 100px;
 }
 
@@ -86,16 +79,23 @@ ul li {
 .menu {
   border-top: solid;
   border-bottom: solid;
+  border-width: 1px;
   height: 100%;
   padding-right: 15px;
 }
 
 .bottom {
   text-align: left;
+  background-color: #cc2900;
+}
+
+.mid {
+  background-color: white;
 }
 
 .top {
   text-align: right;
+  background-color: #cc2900;
 }
 
 .logo-img {
@@ -118,5 +118,16 @@ ul li {
 .footer {
   border-top: solid;
   border-bottom: solid;
+  border-width: 1px;
   height: 100%;
+  background-color: #cc2900;
+}
+
+body {
+  background-color: #f2f2f2;
+}
+
+.pitch {
+  height: 50%;
+  width: 50%;
 }
