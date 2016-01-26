@@ -40,11 +40,6 @@ class FantasyTeamPlayersController < ApplicationController
   end
 
   def fantasy_team__player_params
-    params.require(:fantasy_team_player).permit(:active, :first_team, :football_player_id, :fantasy_team_id)
+    params.require(:fantasy_team_player).permit(:football_player_id, :fantasy_team_id)
   end
 end
-
-t.boolean "active"
-t.boolean "first_team"
-t.integer "football_player_id"
-t.integer "fantasy_team_id"
