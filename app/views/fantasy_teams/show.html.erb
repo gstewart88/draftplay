@@ -1,20 +1,18 @@
-<div class="box box-10">
-<h3>Team Name: <%= @fantasy_team.name %></h3>
+<div class="box box-12">
+  <h3>Team Name: <%= @fantasy_team.name %></h3>
 </div>
-<div class="box box-2 table">
-<br>
-<p class="leaguetablehead">Fantasy League Table</p>
-<p>Hibernian</p>
-<p>Celtic</p>
-<p>Hearts</p>
-<p>Alloa</p>
+<div class="box box-6">
+  <div class="panel">
+    <% @fantasy_team.fantasy_team_players.each do |i| %>
+    <%= i.football_player.name %>
+    <br>
+    <% end %>
+  </div>
 </div>
-<div class="box box-10">
-<% @fantasy_team.fantasy_team_players.each do |i| %>
-  <%= i.football_player.name %>
-<% end %>
-<br>
+<div class="box box-6">
 
-<%= button_to('Edit', edit_fantasy_league_fantasy_team_path, method: :get, class: "thumbnail-buttons form-2") %>
-<%= link_to 'Back', fantasy_league_fantasy_teams_path %>
+  <img class="pitch" src="https://prepforthepitch.files.wordpress.com/2012/09/4-4-2.jpg" alt="">
+    <%= button_to('Edit', edit_fantasy_league_fantasy_team_path, method: :get, class: "thumbnail-buttons form-2") %>
+    <%= link_to 'Back', fantasy_league_fantasy_teams_path %>
+
 </div>
