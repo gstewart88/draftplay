@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 User.delete_all
+Fixture.delete_all
 FootballPlayer.delete_all
 FantasyLeague.delete_all
 FantasyTeam.delete_all
