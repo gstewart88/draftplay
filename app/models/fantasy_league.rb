@@ -4,15 +4,20 @@ class FantasyLeague < ActiveRecord::Base
 
   aasm do
     state :forming, :initial => true
-    state :drafting, :before_enter => :draft!
+    state :drafting, :after_enter => :run_draft
+    state :scheduling, :after_enter => :set_fixtures
     state :playing
 
     event :draft do
       transitions :from => :forming, :to => :drafting
     end
 
+    event :schedule do
+      transitions :from => :drafting, :to => :scheduling
+    end
+
     event :play do
-      transitions :from => :drafting, :to => :playing
+      transitions :from => :scheduling, :to => :playing
     end
 
 
@@ -24,8 +29,9 @@ class FantasyLeague < ActiveRecord::Base
     end
   end
 
-  def draft!
-      
+  private
+  def run_draft
+
     # goalies
     allocate_players(2, :goalkeepers)
 
@@ -35,6 +41,7 @@ class FantasyLeague < ActiveRecord::Base
     # attackers
     allocate_players(4, :attackers)
     
+    schedule!
 
     # (1..(FantasyTeam.where(fantasy_league_id: params[:id]).count)).each do |i|
     #   FantasyTeamPlayer.new(football_player_id: FootballPlayer.where(position: "Defender").sample , fantasy_team_id: i )
@@ -58,6 +65,15 @@ class FantasyLeague < ActiveRecord::Base
         fantasy_team.fantasy_team_players.create! football_player: FootballPlayer.send(position).not_in_league(self).random.first
       end
     end
+  end
+
+  private
+  def set_fixtures
+    fantasy_team_ids.combination(2).to_a.each do |team1, team2|
+      Fixture.create!(home_team_id: team1, away_team_id: team2)
+      Fixture.create!(home_team_id: team2, away_team_id: team1)
+    end
+    play!
   end
 
 
