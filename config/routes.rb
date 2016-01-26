@@ -4,6 +4,9 @@ Rails.application.routes.draw do
   root to: "home#index"
   resources :fantasy_leagues do
     resources :fantasy_teams
+    member do
+      put :draft
+    end
   end
 
   resources :fixtures
