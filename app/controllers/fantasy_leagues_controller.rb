@@ -1,8 +1,12 @@
 class FantasyLeaguesController < ApplicationController
   before_action :authenticate_user!
 
-  before_action :set_fantasy_league, only: [:show, :edit, :update, :destroy]
+  before_action :set_fantasy_league, only: [:show, :edit, :update, :destroy, :draft]
   
+  def draft
+    redirect_to(fantasy_leagues_path)
+  end
+
   def index
     @fantasy_leagues = FantasyLeague.all
   end
