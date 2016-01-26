@@ -4,7 +4,8 @@ class FantasyLeaguesController < ApplicationController
   before_action :set_fantasy_league, only: [:show, :edit, :update, :destroy, :draft]
   
   def draft
-    redirect_to(fantasy_leagues_path)
+    @fantasy_league.draft!
+    redirect_to(@fantasy_league)
   end
 
   def index
