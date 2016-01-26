@@ -2,7 +2,7 @@ class FantasyTeamPlayersController < ApplicationController
   before_action :authenticate_user!
 
   before_action :set_fantasy_team_player, only: [:show, :edit, :update, :destroy]
-  
+
   def index
     @fantasy_team_players = FantasyTeamPlayer.all
   end
@@ -39,7 +39,7 @@ class FantasyTeamPlayersController < ApplicationController
     @fantasy_team_player = FantasyTeamPlayer.find(params[:id])
   end
 
-  def fantasy_team__player_params
+  def fantasy_team_player_params
     params.require(:fantasy_team_player).permit(:football_player_id, :fantasy_team_id)
   end
 end
