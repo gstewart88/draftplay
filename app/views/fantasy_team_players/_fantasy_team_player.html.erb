@@ -1,0 +1,6 @@
+<div class>
+<% if fantasy_team_player  %>
+<%= fantasy_team_player.football_player.name %>
+<% end %>
+</div>
+<%= button_to('Edit', edit_fantasy_team_player_path(fantasy_team_player), method: :get) %>
