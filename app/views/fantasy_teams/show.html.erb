@@ -1,18 +1,15 @@
+<img alt="background" class="bg" src="http://i1.wp.com/www.sportsgoogly.com/wp-content/uploads/2014/11/Sergio-Aguero-4.jpg">
 <div class="box box-12">
   <h3>Team Name: <%= @fantasy_team.name %></h3>
 </div>
 <div class="box box-6">
-  <div class="panel">
+
     <% @fantasy_team.fantasy_team_players.each do |i| %>
     <%= i.football_player.name %>
     <br>
     <% end %>
-  </div>
+    <%= link_to 'Back', fantasy_league_fantasy_teams_path %>
 </div>
 <div class="box box-6">
-
-  <img class="pitch" src="https://prepforthepitch.files.wordpress.com/2012/09/4-4-2.jpg" alt="">
-    <%= button_to('Edit', edit_fantasy_league_fantasy_team_path, method: :get, class: "thumbnail-buttons form-2") %>
-    <%= link_to 'Back', fantasy_league_fantasy_teams_path %>
 
 </div>

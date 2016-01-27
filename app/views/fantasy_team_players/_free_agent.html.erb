@@ -1,6 +1,6 @@
 <div>
 <% FootballPlayer.not_in_league(FantasyLeague.first).each do |footballer| %>
-<div draggable="true"><%= footballer.name %></div>
+<div class="type1" draggable="true" ondragstart="drag(event)"><span class="p2"><%= footballer.name %></span></div>
 <br>
 <% end %>
 </div>

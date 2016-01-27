@@ -10,13 +10,14 @@
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="mobtitle">DraftPlay</div>
   <div class="page-wrap">
     <div class="top box box-12">
       <% if user_signed_in? %>
       <nav class="menu">
-        <ul>
-          <li>Signed in as: <%= current_user.username %></li>
-          <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+        <ul class="moblist">
+          <li class="mobsignedin">Signed in as: <%= current_user.username %></li>
+          <li class="moblogout"><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
         </ul>
       </nav>
       <% else %>
@@ -29,21 +30,18 @@
       <% end %>
     </div>
 
-    <div class="mid box box-4">
-      <div class="panel">
-        <img class="logo-img" src="http://i.imgur.com/YQVhwzl.png">
-      </div>
+    <div class="mid box box-4 mobinvis">
+  <!--       <img class="logo-img img-circle" src="http://i.imgur.com/YQVhwzl.png"> -->
     </div>
 
-    <div class="mid box box-4">
-      <div class="panel">
+    <div class="mid box box-4 mobinvis">
+
         <!--     <img class="logo2-img" src="http://www.fantasyfootballgeek.co.uk/wp-content/uploads/2014/12/giroud.png"> -->
-      </div>
+
     </div>
 
-    <div class="mid box box-4">
-      <div class="panel">
-      </div>
+    <div class="mid box box-4 mobinvis">
+
     </div>
 
     <nav class="navbar navbar-default">
@@ -56,12 +54,12 @@
           </button>
 
         </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Leagues", fantasy_leagues_path %></li>
-            <li><%= link_to "Transfers", fantasy_team_players_path %></li>
-            <li><%= link_to "Fixtures", fixtures_path %></li>
-            <li><%= link_to "Help", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tangerine_2009-03-11.jpg" %></li>
+        <div class="collapse navbar-collapse " id="myNavbar">
+          <ul class="nav navbar-nav navbar-left">
+            <li class ="mobnav blue"><%= link_to "Leagues", fantasy_leagues_path %></li>
+            <li class ="mobnav red"><%= link_to "Transfers", fantasy_team_players_path %></li>
+            <li class ="mobnav orange"><%= link_to "Fixtures", fixtures_path %></li>
+            <li class ="mobnav green"><%= link_to "Help", "https://upload.wikimedia.org/wikipedia/commons/4/4c/Tangerine_2009-03-11.jpg" %></li>
           </ul>
         </div>
       </div>

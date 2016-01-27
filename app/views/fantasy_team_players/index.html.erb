@@ -1,10 +1,14 @@
 <img alt="background" class="bg" src="http://www.hdwallpaper.nu/wp-content/uploads/2016/01/zlatan_ibrahimovic_wallpaper_93585.jpg">
 <div class="box box-6">
-<h2>Your Players</h2>
-<%= render @fantasy_team_players %>
+  <h2>Your Players</h2>
+  <div ondrop="drop(event)" ondragover="allowDrop(event)">
+    <%= render @fantasy_team_players %>
+  </div>
 </div>
 <div class="box box-6">
-<h2>Free Agents</h2>
-<%= render 'free_agent' %>
-<br>
+  <h2>Free Agents</h2>
+  <div ondrop="drop(event)" ondragover="allowDrop(event)">
+    <%= render 'free_agent' %>
+  </div>
+  <br>
 </div>
