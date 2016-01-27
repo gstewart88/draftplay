@@ -86,16 +86,15 @@ and (min-device-width: 768px) {
 
 .bottom {
   text-align: left;
-  background-color: #e7e7e7;
 }
 
 .mid {
-  background-color: white;
+  opacity: 0.4;
 }
 
 .top {
   text-align: right;
-  background-color: #e7e7e7;
+  opacity: 0.4;
 }
 
 .logo-img {
@@ -115,27 +114,44 @@ and (min-device-width: 768px) {
   border-left: solid;
 }
 
-.footer {
-  height: 50px;
-  background-color: #e7e7e7;
+.navbar {
+  opacity: 0.4;
+}
+
+html {
+  height: 100%;
+}
+
+* {
+  margin: 0;
 }
 
 body {
-  background-color: #f2f2f2;
+  height: 100%;
 }
 
 .pitch {
   height: 50%;
   width: 50%;
 }
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin-bottom: -50px; 
 }
 
-@media only screen
-/* Can say print instead of screen for a printout style */
-and (max-device-width: 767px) {
-  .mobinvis{
-    display:none;
-  }
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+    height: 50px; 
+}
+.site-footer {
+  opacity: 0.4;
 }
 
 .carousel-inner img {
@@ -153,4 +169,35 @@ and (max-device-width: 767px) {
     .carousel-caption {
         display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
+}
+
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -2;
+
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%); /* make all photos black and white */ 
+}
+
+}
+
+@media only screen
+/* Can say print instead of screen for a printout style */
+and (max-device-width: 767px) {
+ 
+  .mobinvis{
+    display:none;
+  }
 }
