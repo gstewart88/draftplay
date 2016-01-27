@@ -99,6 +99,8 @@ class FantasyLeague < ActiveRecord::Base
 
   private
   def set_fixtures
+    # find combinations before taking the first and 
+    # last one and making them gameweek 1, then 2 and so on
     fixture = fantasy_team_ids.combination(2).to_a
     (0..((fantasy_team_ids.combination(2).count)/2)-1).each do |i|
       week = []
