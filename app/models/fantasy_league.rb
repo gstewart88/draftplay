@@ -22,15 +22,19 @@ class FantasyLeague < ActiveRecord::Base
 
 
   end
-  
+
   def time_check
+    gameweek = 0
     @time = Time.now
     @day = @time.a.strftime("%A")
     @hour = @time.hour
     if @day == "Sunday" and @hour == 23
-      self.gameweek += 1
       self.run_fixtures
+      self.gameweek += 1
     end
+  end
+
+  def run_fixtures
   end
 
   def football_player_ids
