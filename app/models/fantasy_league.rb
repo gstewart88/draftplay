@@ -67,15 +67,35 @@ class FantasyLeague < ActiveRecord::Base
     end
   end
 
+  # private
+  # def set_fixtures
+  #   index = 1
+  #   fantasy_team_ids.combination(2).to_a.each do |team1, team2|
+  #     Fixture.create!(home_team_id: team1, away_team_id: team2, gameweek: index)
+  #     index = index + 1
+  #   end
+  #   fantasy_team_ids.combination(2).to_a.each do |team1, team2|
+  #     Fixture.create!(home_team_id: team2, away_team_id: team1, gameweek: (index))
+  #     index = index + 1
+  #   end
+  #   play!
+  # end
+
+
+
   private
   def set_fixtures
-    fantasy_team_ids.combination(2).to_a.each do |team1, team2|
-      Fixture.create!(home_team_id: team1, away_team_id: team2)
-      Fixture.create!(home_team_id: team2, away_team_id: team1)
+    fixture = fantasy_team_ids.combination(2).to_a
+    (0..((fantasy_team_ids.combination(2).count)/2)-1).each do |i|
+      week = []
+      week << fixture.pop
+      week << fixture.shift
+      week.each do |team1, team2|
+        Fixture.create!(home_team_id: team1, away_team_id: team2, gameweek: i)
+      end
     end
     play!
   end
-
 
 end
 
