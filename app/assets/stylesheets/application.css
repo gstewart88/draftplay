@@ -1,9 +1,9 @@
 .type1 {
-    width: 100px;
-    height: 100px;
-    background: yellow;
-    border-radius: 50%;
-    border: 3px solid red;
+ color: white;
+}
+
+h2{
+  color: white !important;
 }
 
 .p2 {
@@ -284,18 +284,19 @@ and (max-device-width: 767px) {
     padding: 0 0 !important; 
   }
   .blue{
-    background-color: blue;
+    background-image: url(http://redmancunian.com/wp-content/uploads/2012/08/english-premier-league-trophy.jpg);
     padding-top: 10%;
   }
   .red{
-    background-color: red;
+    background-image: url(http://www.esquireme.com/wp-content/uploads/2015/10/ronaldobanner.jpg);
     padding-top: 10%;
   }
   .orange{
-    background-color: orange;
+    background-image: url(http://www.whatfootballersearn.com/wp-content/uploads/Lionel-Messi.jpg);
     padding-top: 10%;
   }
   .green{
+    background-image: url(http://mufclatest.com/wp-content/uploads/2014/12/Wayne-Rooney1.jpg);
     background-color: green;
     padding-top: 10%;
   }
