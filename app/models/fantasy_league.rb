@@ -22,6 +22,16 @@ class FantasyLeague < ActiveRecord::Base
 
 
   end
+  
+  def time_check
+    @time = Time.now
+    @day = @time.a.strftime("%A")
+    @hour = @time.hour
+    if @day == "Sunday" and @hour == 23
+      self.gameweek += 1
+      self.run_fixtures
+    end
+  end
 
   def football_player_ids
     fantasy_teams.flat_map do |fantasy_team|
