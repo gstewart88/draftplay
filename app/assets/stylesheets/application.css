@@ -1,92 +1,92 @@
+@media only screen
+/* Can say print instead of screen for a printout style */
+and (min-device-width: 768px) {
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
+  .box-1 {
+    width: 8.33333333%;
+  }
+  .box-2 {
+    width: 16.66666666%;
+  }
+  .box-3 {
+    width: 25%;
+  }
+  .box-4 {
+    width: 33.33333333%;
+  }
+  .box-5 {
+    width: 41.66666666%;
+  }
+  .box-6 {
+    width: 50%;
+  }
+  .box-7 {
+    width: 58.33333333%;
+  }
+  .box-8 {
+    width: 66.66666666%;
+  }
+  .box-9 {
+    width: 75%;
+  }
+  .box-10 {
+    width: 83.33333333%;
+  }
+  .box-11 {
+    width: 91.66666666%;
+  }
+  .box-12 {
+    width: 100%;
+  }
 
-td,
-th {
-  padding: 0;
-}
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
 
-.text-center {
-  text-align: center;
-}
+  td,
+  th {
+    padding: 0;
+  }
 
-.panel {
-  height: 100px;
-}
+  .text-center {
+    text-align: center;
+  }
 
-/* Responsive Images */
+  .panel {
+    height: 100px;
+  }
 
-.img-responsive {
-  width: 100%;
-}
+  /* Responsive Images */
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-}
+  .img-responsive {
+    width: 100%;
+  }
 
-.box {
-  display: inline-block;
-  margin-right: -4px;
-  vertical-align: top;
-  box-sizing: border-box;
-}
-/* 12 grid layout */
-.box-1 {
-  width: 8.33333333%;
-}
-.box-2 {
-  width: 16.66666666%;
-}
-.box-3 {
-  width: 25%;
-}
-.box-4 {
-  width: 33.33333333%;
-}
-.box-5 {
-  width: 41.66666666%;
-}
-.box-6 {
-  width: 50%;
-}
-.box-7 {
-  width: 58.33333333%;
-}
-.box-8 {
-  width: 66.66666666%;
-}
-.box-9 {
-  width: 75%;
-}
-.box-10 {
-  width: 83.33333333%;
-}
-.box-11 {
-  width: 91.66666666%;
-}
-.box-12 {
-  width: 100%;
-}
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
 
-ul li {
- display:inline-block;
-}
+  .box {
+    display: inline-block;
+    margin-right: -4px;
+    vertical-align: top;
+    box-sizing: border-box;
+  }
 
-.menu {
-  border-top: solid;
-  border-bottom: solid;
-  border-width: 1px;
+  ul li {
+   display:inline-block;
+ }
+
+ .menu {
   height: 100%;
   padding-right: 15px;
 }
 
 .bottom {
   text-align: left;
-  background-color: #cc2900;
+  background-color: #e7e7e7;
 }
 
 .mid {
@@ -95,7 +95,7 @@ ul li {
 
 .top {
   text-align: right;
-  background-color: #cc2900;
+  background-color: #e7e7e7;
 }
 
 .logo-img {
@@ -116,11 +116,8 @@ ul li {
 }
 
 .footer {
-  border-top: solid;
-  border-bottom: solid;
-  border-width: 1px;
-  height: 100%;
-  background-color: #cc2900;
+  height: 50px;
+  background-color: #e7e7e7;
 }
 
 body {
@@ -130,4 +127,30 @@ body {
 .pitch {
   height: 50%;
   width: 50%;
+}
+}
+
+@media only screen
+/* Can say print instead of screen for a printout style */
+and (max-device-width: 767px) {
+  .mobinvis{
+    display:none;
+  }
+}
+
+.carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff ;
+}
+
+@media (max-width: 600px) {
+    .carousel-caption {
+        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
 }
