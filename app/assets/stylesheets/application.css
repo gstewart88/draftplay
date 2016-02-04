@@ -1,16 +1,18 @@
-.type1 {
- color: white;
-}
-
-h2{
-  color: white !important;
-}
-
-.p2 {
-    font-size: 14px;
-    position: relative;
-    top: 40%;
-}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
 @media only screen
 /* Can say print instead of screen for a printout style */
@@ -18,6 +20,20 @@ and (min-device-width: 768px) {
 
   .mobtitle{
     display: none;
+  }
+
+  .type1 {
+   color: white;
+  }
+
+  h2{
+    color: white !important;
+  }
+
+  .p2 {
+      font-size: 14px;
+      position: relative;
+      top: 40%;
   }
 
   .box-1 {
@@ -201,16 +217,9 @@ body {
     color: #fff ;
 }
 
-@media (max-width: 600px) {
-    .carousel-caption {
-        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-}
-
 img.bg {
   /* Set rules to fill background */
   min-height: 100%;
-  min-width: 1024px;
   
   /* Set up proportionate scaling */
   width: 100%;
@@ -227,85 +236,4 @@ img.bg {
   filter: grayscale(100%); /* make all photos black and white */ 
 }
 
-}
-
-@media only screen
-/* Can say print instead of screen for a printout style */
-and (max-device-width: 767px) {
- 
-  .mobinvis{
-    display:none;
-  }
-
-  body{
-    margin: 0 0;
-    text-align: center;
-  }
-
-  .container{
-    width: 100% !important;
-    margin: 0 0 !important;
-    padding: 0 0 !important;
-  }
-
-  .moblogout{
-    border-style: solid;
-    display:inline-block;
-    padding-top: 10%;
-    width: 49.8%;
-    height: 300px;
-    font-size: 80px !important;
-    vertical-align: bottom;
-  }
-  .mobsignedin{
-    border-style: solid;
-    display:inline-block;
-    padding-top: 10%;
-    width: 49.8%;
-    height: 300px ;
-    font-size: 60px !important;
-  }
-  .moblist{
-    padding: 0px !important;
-  }
-  .mobnav{
-    width: 100% !important;
-    height: 300px;
-    font-size: 80px !important;
-  }
-  .site-footer{
-    display: none;
-  }
-  .nav, .navbar, .navbar-default{
-    width: 100% !important;
-    border: 0 0 !important;
-  }
-  .collapse{
-    padding: 0 0 !important; 
-  }
-  .blue{
-    background-image: url(http://redmancunian.com/wp-content/uploads/2012/08/english-premier-league-trophy.jpg);
-    padding-top: 10%;
-  }
-  .red{
-    background-image: url(http://grup14.com/files/2016-01/iniesta-vs-espanyol.jpeg);
-    padding-top: 10%;
-  }
-  .orange{
-    background-image: url(http://www.esquireme.com/wp-content/uploads/2015/10/ronaldobanner.jpg);
-    padding-top: 10%;
-  }
-  .green{
-    background-image: url(http://mufclatest.com/wp-content/uploads/2014/12/Wayne-Rooney1.jpg);
-    background-color: green;
-    padding-top: 10%;
-  }
-  .mobtitle{
-    background-color: white;
-    width: 100%;
-    height: 200px;
-    font-size: 80px !important;
-    line-height: 1 !important;
-    padding-top: 5%;
-  }
 }
