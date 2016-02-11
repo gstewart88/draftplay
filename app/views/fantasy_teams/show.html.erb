@@ -1,15 +1,16 @@
-<img alt="background" class="bg" src="http://i1.wp.com/www.sportsgoogly.com/wp-content/uploads/2014/11/Sergio-Aguero-4.jpg">
+<img src="/images/messi.jpg" class= "bg mobinvis" alt="background">
+
 <div class="box box-12">
   <h3>Team Name: <%= @fantasy_team.name %></h3>
 </div>
 <div class="box box-6">
-
+<div class="sortable" id="sortable">
     <% @fantasy_team.fantasy_team_players.each do |i| %>
-    <%= i.football_player.name %>
-    <br>
+    <div class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><%= i.football_player.name %></div>
     <% end %>
     <%= link_to 'Back', fantasy_league_fantasy_teams_path %>
+  </div>
 </div>
 <div class="box box-6">
-
 </div>
+
