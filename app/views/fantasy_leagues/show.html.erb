@@ -1,13 +1,14 @@
 <img src="/images/hazard.jpg" class= "bg mobinvis" alt="background">
 <div class ="infoarea">
-<h2><%= @fantasy_league.name %></h2>
+  <h2><%= @fantasy_league.name %></h2>
 
-<% @fantasy_league.fantasy_teams.each do |i| %>
+  <% @fantasy_league.fantasy_teams.each do |i| %>
   <div class="type1"><%= i.name %></div>
-<% end %>
+  <% end %>
 
-</div>
+
 <br>
+
 <%= link_to('Add Fantasy Team', new_fantasy_league_fantasy_team_path(@fantasy_league)) %>
 <%= link_to('Edit', edit_fantasy_league_path(@fantasy_league)) %>
 <%= link_to('Back', fantasy_leagues_path) %>
